@@ -1,0 +1,490 @@
+Derren Healy (11):
+      First Gui Test
+      CSVtest
+      CSVtest
+      Merge branch 'master' of https://bitbucket.org/GordonHaylett/cab302-assignment
+      Unit Tests
+      Merge branch 'master' of https://bitbucket.org/GordonHaylett/cab302-assignment
+      Unit Tests
+      Merge branch 'master' of https://bitbucket.org/GordonHaylett/cab302-assignment
+      GUI Update
+      GUI Update
+      GUI Update
+
+Gordon (37):
+      Version 0
+      CSV add
+      Version 0.1
+      Version 0.1
+      Version 1.1
+      Version 1.9
+      Version 2: needs manifest support
+      Version 2.1:Cant read manifest
+      Version 3:Manifest Edition
+      Version 4
+      Version 4.1
+      Version 5: refractor 1
+      Version 5.5: almost oop
+      Version 6: oop
+      Version 7
+      Version 8: almost updates manifests
+      Update 9: Naming convention change
+      Update 11: Manifest rework start
+      Update 12
+      update 13
+      update 14
+      update 15
+      update 16: nothing
+      update manifest partial
+      update manifest partial
+      update Makes maifest bus doesnt load
+      update dosent make menifest but almost loads it
+      creates and updates manifests, small price discrepancy,. Savings from better shipping compactness?
+      test
+      Java doc comments
+      removed console writing from store
+      Added inventory
+      More utility
+      More utility
+      merge/ head text was added and removed
+      removed GUI
+      rounded capital to 2 sigfigs
+
+* c66dc65 rounded capital to 2 sigfigs
+*   1f7f279 GUI Update
+|\  
+| * 9ab3e06 removed GUI
+* |   fb70f8d GUI Update
+|\ \  
+| |/  
+| * eb599de merge/ head text was added and removed
+| *   f822c43  More utility
+| |\  
+| * | 7ca07c3  More utility
+* | | 48f9c8f GUI Update
+| |/  
+|/|   
+* |   798e201 Merge branch 'master' of https://bitbucket.org/GordonHaylett/cab302-assignment
+|\ \  
+| |/  
+| * ec58c8d Added inventory
+| * 1fc2910 removed console writing from store
+| * bd50953 Java doc comments
+* | 52d5d31 Unit Tests
+|/  
+*   049ba66 Merge branch 'master' of https://bitbucket.org/GordonHaylett/cab302-assignment
+|\  
+| * 1e80a81 test
+* | 8f5c440 Unit Tests
+|/  
+* a6b807f creates and updates manifests, small price discrepancy,. Savings from better shipping compactness?
+* ecac098 update dosent make menifest but almost loads it
+* 4539f57 update Makes maifest bus doesnt load
+* 00eeeca update manifest partial
+* 2e04702 update manifest partial
+* 5a97db3 update 16: nothing
+* aa90ae2 update 15
+*   70baa7f Merge branch 'master' of https://bitbucket.org/GordonHaylett/cab302-assignment
+|\  
+| * 4656003 update 14
+| * e95e125 update 13
+| * 29b3492 Update 12
+| * 682dd19 Update 11: Manifest rework start
+* | 26c35cf CSVtest
+* | 71c3fd7 CSVtest
+* | f86698a First Gui Test
+|/  
+* a911a01 Update 9: Naming convention change
+* 6a06dd0 Version 8: almost updates manifests
+* 5523862 Version 7
+* 41b87e9 Version 6: oop
+* 34b549a Version 5.5: almost oop
+* 1388c14 Version 5: refractor 1
+* 530dc41 Version 4.1
+* ae259a3 Version 4
+* d966b0f Version 3:Manifest Edition
+* c26489c Version 2.1:Cant read manifest
+* fd30655 Version 2: needs manifest support
+* df6e1d8 Version 1.9
+* 989784e Version 1.1
+* d1b41a9 Version 0.1
+* 98110d3 Version 0.1
+* 2eaec6d CSV add
+* 39db235 Version 0
+commit c66dc659cf93e05573032e26ee50a04155d2d63e
+Author: Gordon <gordon.haylett@gmail.com>
+Date:   Sun May 27 22:37:32 2018 +1000
+
+    rounded capital to 2 sigfigs
+
+ 5 files changed, 57 insertions(+), 42 deletions(-)
+
+commit 1f7f2795f8327af54f8bbe9d84daeac3356d3a02
+Merge: fb70f8d 9ab3e06
+Author: Derren Healy <dheal19@gmail.com>
+Date:   Sun May 27 06:02:56 2018 +1000
+
+    GUI Update
+
+commit 9ab3e066533750c603f31407e27edf18d8a16af9
+Author: Gordon <gordon.haylett@gmail.com>
+Date:   Sun May 27 22:17:49 2018 +1000
+
+    removed GUI
+
+ 7 files changed, 182 deletions(-)
+
+commit eb599de5947db05230a7ca1377bace885c634080
+Author: Gordon <gordon.haylett@gmail.com>
+Date:   Sun May 27 21:48:24 2018 +1000
+
+    merge/ head text was added and removed
+
+ 7 files changed, 2 insertions(+), 13 deletions(-)
+
+commit f822c434fef9a626b6ed567399fab4b0e630e66a
+Merge: 7ca07c3 798e201
+Author: Gordon <gordon.haylett@gmail.com>
+Date:   Sun May 27 21:40:20 2018 +1000
+
+     More utility
+
+commit 7ca07c38585e9bab80c9e20cc053080b3ec99adf
+Author: Gordon <gordon.haylett@gmail.com>
+Date:   Sun May 27 21:37:37 2018 +1000
+
+     More utility
+
+ 13 files changed, 19 insertions(+), 505 deletions(-)
+
+commit ec58c8d8f363cf709dc0f2d007cc672f93202de1
+Author: Gordon <gordon.haylett@gmail.com>
+Date:   Sun May 27 21:24:31 2018 +1000
+
+    Added inventory
+
+ 1 file changed, 11 insertions(+), 1 deletion(-)
+
+commit 1fc29108cdbe2c46e526617bb96535d6d25ba36a
+Author: Gordon <gordon.haylett@gmail.com>
+Date:   Sun May 27 20:41:44 2018 +1000
+
+    removed console writing from store
+
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit bd509531cc0d7851630a0b543278156b0aa804df
+Author: Gordon <gordon.haylett@gmail.com>
+Date:   Sun May 27 20:35:27 2018 +1000
+
+    Java doc comments
+
+ 18 files changed, 341 insertions(+), 213 deletions(-)
+
+commit fb70f8deefb97663f8d4473c615ef69df65d04a9
+Merge: 48f9c8f eb599de
+Author: Derren Healy <dheal19@gmail.com>
+Date:   Sun May 27 06:01:21 2018 +1000
+
+    GUI Update
+
+commit 48f9c8f473b720d9d1f56887ebedc902c6246cfc
+Author: Derren Healy <dheal19@gmail.com>
+Date:   Sun May 27 05:56:04 2018 +1000
+
+    GUI Update
+
+ 8 files changed, 16 insertions(+), 17 deletions(-)
+
+commit 798e201284d3413bc3190d347d2a367d12efaadb
+Merge: 52d5d31 ec58c8d
+Author: Derren Healy <dheal19@gmail.com>
+Date:   Sun May 27 05:17:04 2018 +1000
+
+    Merge branch 'master' of https://bitbucket.org/GordonHaylett/cab302-assignment
+
+commit 52d5d3150017f251233baa6d1a2ec76ddebf521d
+Author: Derren Healy <dheal19@gmail.com>
+Date:   Sun May 27 05:16:22 2018 +1000
+
+    Unit Tests
+
+ 13 files changed, 55 insertions(+), 646 deletions(-)
+
+commit 049ba66e12b67950c934491c0cc113aac3300e51
+Merge: 8f5c440 1e80a81
+Author: Derren Healy <dheal19@gmail.com>
+Date:   Sun May 27 03:11:07 2018 +1000
+
+    Merge branch 'master' of https://bitbucket.org/GordonHaylett/cab302-assignment
+
+commit 1e80a819f87a423d1fe32f04865f0d5022b948e9
+Author: Gordon <gordon.haylett@gmail.com>
+Date:   Sun May 27 19:21:50 2018 +1000
+
+    test
+
+ 8 files changed, 16 insertions(+), 10 deletions(-)
+
+commit 8f5c440c7097179c2adf2c108ca51b65a13c9b6a
+Author: Derren Healy <dheal19@gmail.com>
+Date:   Sun May 27 03:08:52 2018 +1000
+
+    Unit Tests
+
+ 17 files changed, 533 insertions(+), 1 deletion(-)
+
+commit a6b807f890e3167dd763f450c108392dd1e1b454
+Author: Gordon <gordon.haylett@gmail.com>
+Date:   Thu May 24 16:54:39 2018 +1000
+
+    creates and updates manifests, small price discrepancy,. Savings from better shipping compactness?
+
+ 4 files changed, 240 insertions(+), 21 deletions(-)
+
+commit ecac0983ed506ae603197d280b8c17629f757b61
+Author: Gordon <gordon.haylett@gmail.com>
+Date:   Wed May 23 18:03:47 2018 +1000
+
+    update dosent make menifest but almost loads it
+
+ 4 files changed, 144 insertions(+), 146 deletions(-)
+
+commit 4539f577ccb9eed260a7763587398b1df0634d25
+Author: Gordon <gordon.haylett@gmail.com>
+Date:   Wed May 23 15:01:51 2018 +1000
+
+    update Makes maifest bus doesnt load
+
+ 6 files changed, 217 insertions(+), 87 deletions(-)
+
+commit 00eeecabd903d9be91d925f0255130ae3733f5f2
+Author: Gordon <gordon.haylett@gmail.com>
+Date:   Tue May 22 23:51:07 2018 +1000
+
+    update manifest partial
+
+ 5 files changed, 81 insertions(+), 19 deletions(-)
+
+commit 2e04702ef88591674b2fabafe6d107e459323b55
+Author: Gordon <gordon.haylett@gmail.com>
+Date:   Tue May 22 22:56:58 2018 +1000
+
+    update manifest partial
+
+ 5 files changed, 75 insertions(+), 2 deletions(-)
+
+commit 5a97db3fd402d2c98d8d94eb23dda8c667e9b8c3
+Author: Gordon <gordon.haylett@gmail.com>
+Date:   Tue May 22 22:28:00 2018 +1000
+
+    update 16: nothing
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit aa90ae2348546962d98a0dff5d7745aa0e606437
+Author: Gordon <gordon.haylett@gmail.com>
+Date:   Tue May 22 22:25:37 2018 +1000
+
+    update 15
+
+ 3 files changed, 1 insertion(+), 2 deletions(-)
+
+commit 70baa7f43c860374dcd20a3255fe3c4d6760a490
+Merge: 26c35cf 4656003
+Author: Derren Healy <dheal19@gmail.com>
+Date:   Tue May 22 06:01:42 2018 +1000
+
+    Merge branch 'master' of https://bitbucket.org/GordonHaylett/cab302-assignment
+
+commit 4656003d48b2732ce6c892f012a02e313c8dd655
+Author: Gordon <gordon.haylett@gmail.com>
+Date:   Tue May 22 22:11:03 2018 +1000
+
+    update 14
+
+ 2 files changed, 1 insertion(+)
+
+commit e95e125a1046fcff2392f14af8b51eda4505ff3e
+Author: Gordon <gordon.haylett@gmail.com>
+Date:   Tue May 22 22:06:28 2018 +1000
+
+    update 13
+
+ 4 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 29b3492a0615b20ed9d9fb18ab7857a7a3607243
+Author: Gordon <gordon.haylett@gmail.com>
+Date:   Tue May 22 21:56:29 2018 +1000
+
+    Update 12
+
+ 4 files changed, 57 insertions(+), 12 deletions(-)
+
+commit 682dd19f09a8a22a83aff2afcd97ec19a8647683
+Author: Gordon <gordon.haylett@gmail.com>
+Date:   Tue May 22 20:34:09 2018 +1000
+
+    Update 11: Manifest rework start
+
+ 1 file changed, 1 insertion(+)
+
+commit a911a01e3b7c9681ab46d6cef59cd42a63cffaca
+Author: Gordon <gordon.haylett@gmail.com>
+Date:   Tue May 22 20:10:47 2018 +1000
+
+    Update 9: Naming convention change
+
+ 13 files changed, 35 insertions(+), 17 deletions(-)
+
+commit 26c35cf4c12973dc693c55724a96f66ed6891df8
+Author: Derren Healy <dheal19@gmail.com>
+Date:   Tue May 22 05:57:49 2018 +1000
+
+    CSVtest
+
+ 1 file changed, 10 insertions(+), 9 deletions(-)
+
+commit 71c3fd7c85c219aa8d952a6e6e01bc0a795bb1ca
+Author: Derren Healy <dheal19@gmail.com>
+Date:   Tue May 22 05:48:01 2018 +1000
+
+    CSVtest
+
+ 9 files changed, 32 insertions(+), 9 deletions(-)
+
+commit f86698a70a446108c1851b238b4c216c53107f0d
+Author: Derren Healy <dheal19@gmail.com>
+Date:   Tue May 22 04:24:00 2018 +1000
+
+    First Gui Test
+
+ 2 files changed, 156 insertions(+)
+
+commit 6a06dd06ecf686c2d249df67c1db0225aa84ba2a
+Author: Gordon <gordon.haylett@gmail.com>
+Date:   Mon May 21 13:36:36 2018 +1000
+
+    Version 8: almost updates manifests
+
+ 8 files changed, 111 insertions(+), 42 deletions(-)
+
+commit 55238620d1ee50b1c7b136465f6dafd01424d03f
+Author: Gordon <gordon.haylett@gmail.com>
+Date:   Sat May 19 16:59:08 2018 +1000
+
+    Version 7
+
+ 6 files changed, 131 insertions(+), 12 deletions(-)
+
+commit 41b87e9b39881cec34014c961fecf5d3de6631c1
+Author: Gordon <gordon.haylett@gmail.com>
+Date:   Fri May 18 23:34:23 2018 +1000
+
+    Version 6: oop
+
+ 8 files changed, 163 insertions(+), 7 deletions(-)
+
+commit 34b549a7f69305dabb65e2a64cdedb3187a97b80
+Author: Gordon <gordon.haylett@gmail.com>
+Date:   Fri May 18 20:05:12 2018 +1000
+
+    Version 5.5: almost oop
+
+ 4 files changed, 150 insertions(+), 6 deletions(-)
+
+commit 1388c14fcfecb8d7fc7b03df3de0b26b553f19eb
+Author: Gordon <gordon.haylett@gmail.com>
+Date:   Fri May 18 19:06:08 2018 +1000
+
+    Version 5: refractor 1
+
+ 15 files changed, 90 insertions(+), 27 deletions(-)
+
+commit 530dc414bf91e454dd93fa23f34087a63c2b1bf4
+Author: Gordon <gordon.haylett@gmail.com>
+Date:   Sat May 12 19:04:48 2018 +1000
+
+    Version 4.1
+
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+commit ae259a3fd13321dc4e639f6c5804d69a4b69808e
+Author: Gordon <gordon.haylett@gmail.com>
+Date:   Sat May 12 14:09:17 2018 +1000
+
+    Version 4
+
+ 1 file changed, 117 insertions(+), 34 deletions(-)
+
+commit d966b0fda9146c8a762f11914f84fb0150f0546e
+Author: Gordon <gordon.haylett@gmail.com>
+Date:   Sat May 12 12:02:57 2018 +1000
+
+    Version 3:Manifest Edition
+
+ 1 file changed, 53 insertions(+), 3 deletions(-)
+
+commit c26489ce553fe8b968867029e788163619df67a3
+Author: Gordon <gordon.haylett@gmail.com>
+Date:   Fri May 11 20:31:02 2018 +1000
+
+    Version 2.1:Cant read manifest
+
+ 1 file changed, 56 insertions(+), 22 deletions(-)
+
+commit fd30655c4c8d14b69a4bc885410c9d9daa9d2536
+Author: Gordon <gordon.haylett@gmail.com>
+Date:   Fri May 11 14:35:06 2018 +1000
+
+    Version 2: needs manifest support
+
+ 1 file changed, 50 insertions(+), 24 deletions(-)
+
+commit df6e1d88e49ca30ddd7b8f6807971e433ce22c3f
+Author: Gordon <gordon.haylett@gmail.com>
+Date:   Fri May 11 14:00:57 2018 +1000
+
+    Version 1.9
+
+ 1 file changed, 205 insertions(+), 50 deletions(-)
+
+commit 989784ea9d4d84040aa7825b6cb2fcb8cfe14eb0
+Author: Gordon <gordon.haylett@gmail.com>
+Date:   Thu May 10 22:41:24 2018 +1000
+
+    Version 1.1
+
+ 1 file changed, 21 insertions(+), 2 deletions(-)
+
+commit d1b41a90e96559aa1f3c89c87640a223df7da2e5
+Author: Gordon <gordon.haylett@gmail.com>
+Date:   Thu May 10 22:10:03 2018 +1000
+
+    Version 0.1
+
+ 1 file changed, 32 insertions(+), 16 deletions(-)
+
+commit 98110d31cdd82b33f4223ecbb68a0b2e951608e8
+Author: Gordon <gordon.haylett@gmail.com>
+Date:   Thu May 10 15:29:53 2018 +1000
+
+    Version 0.1
+
+ 3 files changed, 89 insertions(+), 29 deletions(-)
+
+commit 2eaec6d435f1cbc72e7509319469895c3ed40b26
+Author: Gordon <gordon.haylett@gmail.com>
+Date:   Thu May 10 13:57:47 2018 +1000
+
+    CSV add
+
+ 7 files changed, 151 insertions(+)
+
+commit 39db23517b4c82a66e88fd9941c46be0bdab0bba
+Author: Gordon <gordon.haylett@gmail.com>
+Date:   Wed May 9 18:11:57 2018 +1000
+
+    Version 0
+
+ 9 files changed, 115 insertions(+)
