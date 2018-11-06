@@ -1,0 +1,236 @@
+{% extends "vroom/base.html" %}
+
+{% block content %}
+{% load static %}
+
+<script>
+    function update(element){
+        var minPrice = document.getElementById('price-min').value;
+		var maxPrice = document.getElementById('price-max').value;
+		document.getElementById('minSpan').innerHTML = "$" + minPrice;
+        document.getElementById('maxSpan').innerHTML = "$" + maxPrice;
+        document.getElementById('price-min').max = maxPrice;
+        document.getElementById('price-max').min = minPrice;
+	}
+	
+	function hide_drop(value){
+		document.getElementById("tank_high").style.visibility = "hidden";
+		document.getElementById("price_high").style.visibility = "hidden";
+		document.getElementById("power_high").style.visibility = "hidden";
+		
+		document.getElementById("tank_high").disabled = true;
+		document.getElementById("price_high").disabled = true;
+		document.getElementById("power_high").disabled = true;
+
+		if (value != null) {
+            document.getElementById(value + "_radio").checked = true;
+            document.getElementById(value).style.visibility = "visible";
+		    document.getElementById(value).disabled = false;
+        }
+	}
+</script>
+
+<!--The main content of the webpage-->
+<main>
+    <!--First section of the main content. A banner which usually displays the most important information-->
+    <section class="main-cont">
+        <h2 class="search-heading">Search</h2>
+        <form id="cars-form" name="searchForm" method="GET" action="{% url 'vroom:cars' %}">
+            <div id="main-search">
+                {% if filter == '' %}
+                <input type="search" name="search" id="search-text" placeholder="Enter a name" />
+                {% else %}
+                <input type="search" name="search" id="search-text" placeholder="Enter a name" value={{ filter }} />
+                {% endif %}
+                {% if filter_names %}
+                <input type="submit" name="clear" value="Clear Filter"> <!--Clears the store filter-->
+                {% endif %}
+                <input type="submit" id="search-btn" value="Search"/>
+            </div>
+			
+			<div id="sortBy">
+				<strong>Sort By:</strong><br>
+				<input type="radio" name="sort" value="" onclick="hide_drop(null);" checked> Default<br>
+				<input type="radio" name="sort" id="tank_high_radio" value="Car_TankCapacity" onclick="hide_drop('tank_high');"> Tank Capacity
+                
+                <select name="tank_high" id="tank_high">
+                    {% if "low" in filter_names %}
+                    <option value="high">Highest to Lowest</option>
+                    <option value="low" selected>Lowest to Highest</option>
+                    {% else %}
+                    <option value="high" selected>Highest to Lowest</option>
+                    <option value="low">Lowest to Highest</option>
+                    {% endif %}
+				</select>
+				<br>
+				
+				<input type="radio" name="sort" id="price_high_radio" value="Price_New" onclick="hide_drop('price_high');"> Price
+				<select name="price_high" id="price_high">
+                    {% if "low" in filter_names %}
+                    <option value="high">Highest to Lowest</option>
+                    <option value="low" selected>Lowest to Highest</option>
+                    {% else %}
+                    <option value="high" selected>Highest to Lowest</option>
+                    <option value="low">Lowest to Highest</option>
+                    {% endif %}
+				</select>
+				<br>
+				
+				<input type="radio" name="sort" id="power_high_radio" value="Power" onclick="hide_drop('power_high');"> Power
+				<select name="power_high" id="power_high">
+                    {% if "low" in filter_names %}
+                    <option value="high">Highest to Lowest</option>
+                    <option value="low" selected>Lowest to Highest</option>
+                    {% else %}
+                    <option value="high" selected>Highest to Lowest</option>
+                    <option value="low">Lowest to Highest</option>
+                    {% endif %}
+				</select>
+                <br>
+			</div>
+			<script type="text/javascript"> hide_drop('{{sort}}');</script>
+			
+            <div id="filters">
+			<strong>Filter By:</strong> <br>
+                <select name="store">
+                    <option value="">Store:</option>
+                    {% for item in stores %}
+                    {% if not item.name in filter_names %}
+                    <option value="{{ item.name }}">{{ item.name }}</option>
+                    {% else %}
+                    <option value="{{ item.name }}" selected>{{ item.name }}</option>
+                    {% endif %}
+                    {% endfor %}
+                </select>
+                <select name="make_name">
+                    <option value="">Make:</option>
+                    {% for item in make_name %}
+                    {% if not item.make_name in filter_names %}
+                    <option value="{{ item.make_name }}">{{ item.make_name }}</option>
+                    {% else %}
+                    <option value="{{ item.make_name }}" selected>{{ item.make_name }}</option>
+                    {% endif %}
+                    {% endfor %}
+                </select>
+                <select name="year">
+                    <option value="">Year:</option>
+                    {% for item in seriesYear %}
+                    {% if not item.seriesYear in filter_names %}
+                    <option value={{ item.seriesYear }}>{{ item.seriesYear }}</option>
+                    {% else %}
+                    <option value={{ item.seriesYear }} selected>{{ item.seriesYear }}</option>
+                    {% endif %}
+                    {% endfor %}
+                </select>
+                <select name="fuel_system">
+                    <option value="">Fuel System:</option>
+                    {% for item in fuel_system %}
+                    {% if not item.fuel_system in filter_names %}
+                    <option value="{{ item.fuel_system }}">{{ item.fuel_system }}</option>
+                    {% else %}
+                    <option value="{{ item.fuel_system }}" selected>{{ item.fuel_system }}</option>
+                    {% endif %}
+                    {% endfor %}
+                </select>
+                <select name="body_type">
+                    <option value="">Body Type:</option>
+                    {% for item in body_type %}
+                    {% if not item.body_type in filter_names %}
+                    <option value="{{ item.body_type }}">{{ item.body_type }}</option>
+                    {% else %}
+                    <option value="{{ item.body_type }}" selected>{{ item.body_type }}</option>
+                    {% endif %}
+                    {% endfor %}
+                </select>
+                <select name="seating_capacity">
+                    <option value="">Seating:</option>
+                    {% for item in seating_capacity %}
+                    {% if not item.seating_capacity in filter_names %}
+                    <option value="{{ item.seating_capacity }}">{{ item.seating_capacity }}</option>
+                    {% else %}
+                    <option value="{{ item.seating_capacity }}" selected>{{ item.seating_capacity }}</option>
+                    {% endif %}
+                    {% endfor %}
+                </select>
+                <select name="drive">
+                    <option value="">Drive:</option>
+                    {% for item in drive %}
+                    {% if not item.drive in filter_names %}
+                    <option value={{ item.drive }}>{{ item.drive }}</option>
+                    {% else %}
+                    <option value={{ item.drive }} selected>{{ item.drive }}</option>
+                    {% endif %}
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="rangeslider">
+                <label for="price-min">Min:</label>
+                {% if price_min %}
+                <input type="range" name="price-min" id="price-min" value="{{ price_min }}" min="0" step= '1000' max='250000' oninput="update('price-min');"><span id="minSpan">${{ price_min }}</span>
+                <label for="price-max">Max:</label>
+                <input type="range" name="price-max" id="price-max" value="{{ price_max }}" min="0" max="250000" step= '1000' oninput="update('price-max');"><span id="maxSpan">${{ price_max }}</span>
+                {% else %}
+                <input type="range" name="price-min" id="price-min" value="0" min="0" step= '1000' max='250000' oninput="update('price-min');"><span id="minSpan">$0</span>
+                <label for="price-max">Max:</label>
+                <input type="range" name="price-max" id="price-max" value="250000" min="0" max="250000" step= '1000' oninput="update('price-max');"><span id="maxSpan">$250000</span>
+                {% endif %}
+            </div>
+        </form>
+    </section>
+    <!--Second section which contains the less important information but is still useful-->
+    <div class="sub-cont results">
+        <h3>Results</h3>
+        <!--List of search results-->
+        {% if list_of_cars %}
+        <table>
+            <tbody>
+                <tr>
+                    {% if request.session.access == 'GENERAL_STAFF' %}
+                    <th>ID</th>
+                    {% endif %}
+                    <th>Make</th>
+                    <th>Model</th>
+                    <th>Series</th>
+                    <th>Year</th>
+                    <th>Price</th>
+                    <th>Store</th>
+                    <th>Engine</th>
+                    <th>Fuel System</th>
+                    <th>Tank</th>
+                    <th>Power</th>
+                    <th>Seats</th>
+                    <th>Transmission</th>
+                    <th>Type</th>
+                    <th>Drive</th>
+                    <th>WheelBase</th>
+                </tr>
+                {% for item in list_of_cars %}
+                <tr>
+                    {% if request.session.access == 'GENERAL_STAFF' %}
+                    <td>{{ item.car.car_id }}</td>
+                    {% endif %}
+                    <td>{{ item.car.make_name }}</td>
+                    <td>{{ item.car.model }}</td>
+                    <td>{{ item.car.series }}</td>
+                    <td>{{ item.car.seriesYear }}</td>
+                    <td>{{ item.car.price_new }}</td>
+                    <td>{{ item.return_store.name }}</td>
+                    <td>{{ item.car.engine_size }}</td>
+                    <td>{{ item.car.fuel_system }}</td>
+                    <td>{{ item.car.tank_capacity }}</td>
+                    <td>{{ item.car.power }}</td>
+                    <td>{{ item.car.seating_capacity }}</td>
+                    <td>{{ item.car.standard_transmission }}</td>
+                    <td>{{ item.car.body_type }}</td>
+                    <td>{{ item.car.drive }}</td>
+                    <td>{{ item.car.wheelbase }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p>Oops. We couldn't find any cars matching your search</p>
+        {% endif %}
+    </div>
+</main>
+{% endblock %}

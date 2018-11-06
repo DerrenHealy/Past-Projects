@@ -1,0 +1,738 @@
+/* Defining color constants */
+:root {
+    --blue: #374AAD;
+    --light-grey: #ecf0f1;
+    --white: #ffffff;
+    --black: #000000;
+    --input: #f2f2f2;
+    --purple: #9626A6;
+    --yellow: #DEF735;
+    --orange: #FDC437;
+    --red: #eb4a24;
+    --dark-grey: #dee2e2;
+    --light-blue: #6374cd;
+}
+
+/* Styles for mobile / tablets */
+header {
+    height: 150px;
+    flex-flow: column;
+
+}
+
+main {
+    min-height: calc((100vh) - (200px));
+}
+
+.sub-cont {
+    margin: 0 5px;
+    flex-flow: column;
+}
+
+header h1 {
+    margin-bottom: 0;
+}
+
+.main-cont form input[type=search] {
+    min-width: 0;
+}
+
+.main-cont h2 {
+    cursor: default;
+}
+
+/*----------------------------------------------------------------------------*/
+/* Content flow for tablet view */
+
+@media screen and (min-width: 415px) {
+    .sub-cont {
+        flex-flow: row;
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* When on desktop add or override the mobile/tablet properties to these */
+@media screen and (min-width: 1365px) {
+    header {
+        height: 100px;
+        justify-content: space-between;
+        flex-flow: row wrap;
+    }
+
+    header h1 {
+        margin-left: 12%;
+        margin-bottom: 0.67em;
+    }
+
+    nav {
+        margin-right: 12%;
+    }
+
+    main {
+        min-height: calc((100vh) - (150px));
+    }
+
+    .sub-cont {
+        margin: 0 20%;
+    }
+
+}
+
+/*----------------------------------------------------------------------------*/
+/* These styles are CONSTANT no matter what browser size */
+
+/*==========Styles for index.html==========*/
+
+html {
+    min-height: 100vh;
+    height: 100px;
+}
+
+body {
+    margin: 0;
+    background-color: var(--light-grey);
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    flex-flow: column;
+    align-items: stretch;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--white);
+    color: var(--blue);
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 40px;
+}
+
+nav {
+    height: 100px;
+    display: flex;
+    align-items: flex-end;
+    color: var(--black);
+}
+
+nav ul {
+    padding: 0;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    list-style-type: none;
+    align-items: center;
+    margin: 25px 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+    font-size: 22px;
+}
+
+nav a {
+    color: var(--black);
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--blue);
+}
+
+.sign-up-btn {
+    border: 1px solid black;
+    padding: 0;
+}
+
+.sign-up-btn a {
+    display: block;
+    padding: 5px 10px;
+}
+
+.sign-up-btn:hover {
+    background-color: var(--blue);
+    border: 1px solid white;
+}
+
+.sign-up-btn:hover a {
+    color: white;
+}
+
+footer {
+    background-color: var(--white);
+    color: var(--black);
+    width: 100%;
+    height: 50px;
+}
+
+main {
+    flex: 1 0 auto;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: column;
+}
+
+.main-cont {
+    flex-grow: 2;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blue);
+    padding: 0 10%;
+    min-height: 280px;
+    flex-shrink: 0;
+}
+
+.main-cont h2 {
+    font-size: 30px;
+    margin: 0;
+    color: var(--white);
+}
+
+.main-cont p {
+    font-size: 20px;
+    margin: 0;
+    color: var(--white);
+}
+
+#index-form {
+    display: flex;
+    flex-flow: row;
+    margin: 20px 0;
+}
+
+#index-form input[type=search] {
+    border: 0;
+    height: 50px;
+    padding: 0px 20px;
+    font-size: 20px;
+    width: 100%;
+    min-width: 500px;
+    background-color: var(--input);
+    font-family: 'Lato', sans-serif;
+}
+
+#index-form input[type=search]:hover {
+    background-color: var(--white);
+}
+
+#index-form input:focus {
+    outline: 0;
+}
+
+#index-form input[type=submit] {
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--white);
+    border: 1px solid var(--white);
+    padding: 10px 20px;
+    background-color: var(--blue);
+    font-family: 'Lato', sans-serif;
+}
+
+#index-form input[type=submit]:hover {
+    background-color: var(--white);
+    color: var(--blue);
+    cursor: pointer;
+}
+
+.sub-cont {
+    display: flex;
+    flex-grow: 1;
+    background-color: var(--light-grey);
+}
+
+.sub-cont article {
+    text-align: center;
+    flex: 1;
+    padding: 10px 20px;
+}
+
+.sub-cont article a {
+    text-decoration: none;
+}
+
+h1 a {
+    text-decoration: none;
+    color: var(--blue);
+}
+
+.main-cont img {
+    width: 131px;
+    height: 80px;
+    margin-top: 10px;
+}
+
+.sub-cont img {
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+}
+
+footer p {
+    margin-left: 30px;
+}
+
+/*
+================================================================================
+*/
+/*==========Styles for search.html==========*/
+
+#cars-form, #user-form, #report-form {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    font-size: 20px;
+    width: 60%;
+    min-width: 300px;
+    padding: 20px 0;
+    border: 2px solid var(--purple);
+    background-color: var(--white);
+}
+
+#main-search {
+    display: flex;
+    flex-flow: row;
+    width: 90%;
+}
+
+#main-search input[type=search] {
+    border: 0;
+    padding: 5px 20px;
+    font-size: 20px;
+    width: 100%;
+    min-width: 150px;
+    background-color: #f2f2f2;
+}
+
+#main-search input[type=search]:hover {
+    background-color: var(--white);
+}
+
+#main-search input[type=search]:focus {
+    outline: 0;
+}
+
+#main-search input[type=submit] {
+    min-width: 80px;
+    font-size: 20px;
+    background-color: var(--purple);
+    color: var(--white);
+    border: 0;
+    text-transform: uppercase;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#main-search input[type=submit]:hover {
+    background-color: var(--blue);
+}
+
+#main-search input[name=clear]  {
+    min-width: 125px;
+}
+
+select {
+    outline-color: var(--purple);
+}
+
+#sortBy {
+    padding-left: 125px;
+    cursor: default;
+}
+
+#sortBy strong {
+    padding-left: 45px;
+}
+
+#filters {
+    padding-top: 5px;
+    border: 0;
+    font-family: 'Lato', sans-serif;
+    cursor: default;
+}
+
+#filters h4 {
+    color: white;
+    text-align: center;
+}
+
+#sortBy input[type=radio], #sortBy select, #filters select {
+    cursor: pointer;
+}
+
+.search-heading {
+    border: 2px solid var(--purple);
+    width: 60%;
+    min-width: 300px;
+    text-align: center;
+    background-color: var(--purple);
+    color: var(--white) !important;
+}
+
+.results {
+    flex-flow: column;
+    justify-content: center;
+    text-align: center;
+    cursor: default;
+    margin: 0 5% !important;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+tr {
+    background-color: var(--white);
+    border-bottom: 10px solid #ecf0f1;
+}
+
+td {
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 13px;
+}
+
+tr:first-of-type {
+    background-color: var(--purple);
+    color: var(--white);
+    border: none;
+}
+
+th {
+    padding: 10px 10px;
+}
+
+td:first-child {
+    text-align: left;
+}
+
+td:last-child {
+    text-align: right;
+}
+
+/*
+================================================================================
+*/
+/*==========Styles for log-in.html==========*/
+
+.account-form {
+    background: none;
+    border: 0;
+    padding: 0;
+    margin-top: 50px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.account-form fieldset {
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    width: 80%;
+    max-width: 470px;
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+    background-color: var(--white);
+}
+
+.account-form legend {
+    background-color: var(--purple);
+    width: 100%;
+    font-size: 30px;
+    color: var(--white);
+    padding: 10px 0;
+    text-align: center;
+}
+
+.account-form p {
+    margin: 10px 0;
+}
+
+.blue {
+    color: var(--blue);
+}
+
+.account-form input {
+    width: 80%;
+    margin: 15px auto;
+}
+
+.account-form input[type=text], .account-form input[type=password] {
+    background: var(--input);
+    border: 0;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    text-align: center;
+}
+
+.account-form input[type=text]:hover, .account-form input[type=password]:hover {
+    background: var(--white);
+}
+
+.account-form input[type=text]:focus, .account-form input[type=password]:focus {
+    outline: 0;
+}
+
+.account-form input[type=submit], input[type=reset] {
+    background-color: var(--purple);
+    text-transform: uppercase;
+    border: 0;
+    padding: 15px;
+    color: var(--white);
+    font-size: 14px;
+    cursor: pointer;
+    border: 1px solid var(--purple);
+}
+
+.account-form input[type=submit]:hover {
+    background-color: var(--white);
+    color: var(--purple);
+}
+
+.sign-up-prompt {
+    background-color: var(--white);
+    margin: -10px auto 20px auto;
+    width: 80%;
+    max-width: 470px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.sign-up-prompt a {
+    width: 100px;
+    margin: 0 auto;
+    background-color: var(--blue);
+    color: var(--white);
+    border: 1px solid var(--blue);
+    padding: 10px 20px;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.sign-up-prompt a:hover {
+    background-color: var(--white);
+    color: var(--blue);
+}
+
+.bad-login {
+    color: var(--red);
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+/*
+================================================================================
+*/
+/*==========Styles for store-history.html==========*/
+
+.store-box {
+    background-color: var(--white);
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 5%;
+}
+
+/*
+================================================================================
+*/
+/*==========Styles for analytics.html==========*/
+#report-form #main-search {
+    align-items: center;
+    justify-content: center;
+}
+
+#report-form input[type=month] {
+    border: 1px solid var(--dark-grey);
+    padding: 5px 20px;
+    font-size: 20px;
+    background-color: #f2f2f2;
+}
+
+#report-form input[type=month]:hover {
+    background-color: var(--white);
+}
+
+#report-form input[type=month]:focus {
+    outline: 0;
+}
+
+
+#report-form input[type=submit] {
+    padding: 12px 7px;
+}
+
+#report-form p {
+    color: var(--black);
+    margin-bottom: 10px;
+}
+
+#report {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 20%;
+    padding: 0 10px;
+    border: 3px solid var(--blue);
+}
+
+#report h2 {
+    text-align: center;
+    background-color: var(--blue);
+    margin: 0 -10px;
+    padding-top: 20px;
+    color: var(--white);
+}
+
+#report p:first-of-type {
+    color: var(--white);
+    background-color: var(--blue);
+    text-align: center;
+    margin: 0 -10px;
+    padding-bottom: 20px;
+    font-style: italic;
+}
+
+#report #money-made {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#report #money-made div {
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 2px solid var(--light-blue);
+}
+
+#report #money-made p {
+    background-color: inherit;
+    color: inherit;
+    margin: 0;
+    padding: 5px 30px;
+}
+
+#report #money-made h3 {
+    text-align: left;
+    padding-left: 5px;
+    background-color: var(--light-blue);
+    color: var(--white);
+    margin: 0;
+    padding: 5px 10px;
+}
+
+#report #top-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#report #top-content div {
+    margin: 10px 10px;
+    padding: 0 10px;
+    border: 1px solid var(--light-blue);
+}
+
+#report #top-content h3 {
+    text-align: center;
+    background-color: var(--light-blue);
+    color: var(--white);
+    margin: 0 -10px;
+    padding: 10px 30px;
+}
+
+#report #top-content p {
+    background-color: inherit;
+    color: inherit;
+    padding: inherit;
+    margin: inherit;
+    text-align: left;
+    font-style: normal;
+}
+
+#report .stores {
+    border: 2px solid var(--blue);
+    margin: 10px 0;
+}
+
+#report .stores .store-title {
+    background-color: var(--blue);
+    color: var(--white);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 5px 5px;
+    justify-content: space-between;
+}
+
+#report .store-info-container {
+    display: none;
+}
+
+#report .stores .store-title p {
+    background-color: inherit;
+    color: inherit;
+    padding: inherit;
+    margin: inherit;
+    font-style: normal;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#report .stores .store-title:hover {
+    background-color: var(--light-blue);
+    cursor: pointer;
+}
+
+#report .stores .store-info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#report .stores .store-info div {
+    flex-grow: 1;
+}
+
+#report .stores .store-info p {
+    padding-left: 10px;
+}
+
+#report .stores .store-info .title {
+    margin: inherit;
+    padding: 10px 0;
+    color: var(--white);
+    background-color: var(--light-blue);
+    font-size: 18px;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+#report .stores .store-info div:nth-of-type(2n+1) {
+    border-right: 1px solid var(--light-blue);
+}
+
+#report .stores .store-info div:nth-of-type(2n) {
+    border-left: 1px solid var(--light-blue);
+}
+
+.chart-container {
+    width: 50%;
+    text-align: center;
+    display: block !important;
+    margin-left: auto;
+    margin-right: auto;
+}
